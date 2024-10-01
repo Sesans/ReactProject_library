@@ -19,16 +19,16 @@ function App() {
 
 
   return (
-    <div>
+    <div className='body-container'>
       <Header />
+      <div className='body-content'>
       <div className="container-plist">
         <ProductList addToCart={addToCart} />
       </div>
-
       <div className='container-cart'>
         <Cart cartItems={cartItems} removeFromCart={removeFromCart} />  
       </div>
-
+      </div>
     </div>
   );
 }

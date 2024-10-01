@@ -1,5 +1,5 @@
 import { BookData } from "../interface/BookData";
-import '../styles/cart.css'
+import '../styles/Cart.css'
 
 function priceFormat(value: number) {
     return `R$ ${value.toFixed(2)}`;
@@ -10,7 +10,7 @@ function Cart({ cartItems, removeFromCart }: { cartItems: BookData[], removeFrom
   
     return (
       <div className="shopping-menu">
-        <h2>Carrinho de Compras</h2>
+        <h2>Shopping Cart</h2>
         <ul>
           {cartItems.map((item: BookData, index: number) => (
             <li key={index}>

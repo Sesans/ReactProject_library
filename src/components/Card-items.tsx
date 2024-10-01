@@ -1,4 +1,4 @@
-import "../styles/card.css";
+import "../styles/Card-items.css";
 
 interface CardProps {
     value: number;
@@ -13,8 +13,6 @@ export function Card({ value, image, description, title, onClick} : CardProps){
     return(
         <div className="card" onClick={onClick}>
             <h2>{title}</h2>
-            <img src={image}/>
-            <h2>{description}</h2>
             <p><b>Valor:</b>{value}</p>
         </div>
     )

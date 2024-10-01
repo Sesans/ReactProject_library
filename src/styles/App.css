@@ -1,0 +1,19 @@
+.body-content{
+    display: flex;
+}
+
+.container-plist{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.container-cart{
+    display: flex;
+    justify-content: center;
+    padding-right: 40px;
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 1);
+    max-width: 500px;
+    margin-left: auto;
+    width: 30%;
+}

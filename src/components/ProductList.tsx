@@ -3,7 +3,7 @@ import { Card } from './Card-items';
 import { BookData } from '../interface/BookData';
 import { useBookData } from '../hooks/useBookData';
 import { CreateModal } from './Create-modal';
-import '../styles/productList.css'
+import '../styles/ProductList.css'
 
 function ProductList({ addToCart }: { addToCart: (book: BookData) => void }) {
     const { data } = useBookData();
@@ -15,7 +15,6 @@ function ProductList({ addToCart }: { addToCart: (book: BookData) => void }) {
   
     return (
       <div className="container">
-        <h1>Biblioteca</h1>
         <div className='card-grid'>
           {data?.map((bookData: BookData) => (
             <Card

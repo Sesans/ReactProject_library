@@ -1,31 +1,93 @@
-# React + TypeScript + Vite
+# Shopping Cart Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application for managing an e-commerce shopping cart, built with **React**, **TypeScript**, and **Vite**, and connected to a backend API.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Add to Cart**: Users can add items to the shopping cart.
+- **Remove from Cart**: Users can remove items from the cart.
+- **Update Quantity**: Users can modify the quantity of items in the cart.
+- **Cart Summary**: View a detailed summary of the cart (total items, price, etc.).
+- **API Integration**: The app communicates with a REST API for fetching product data.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: For building the user interface.
+- **TypeScript**: For type safety and enhanced development experience.
+- **Vite**: For fast development and bundling.
+- **Axios**: For handling API requests.
+- **Styled Components**: For styling components with ease.
+- **React Context API**: For global state management of the shopping cart.
 
-- Configure the top-level `parserOptions` property like this:
+# Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Follow these steps to get the project running locally.
+
+### Prerequisites
+
+- Node.js >= 16.x
+- Yarn or npm
+
+# Clone the repository
+```bash
+git clone https://github.com/username/shopping-cart-app.git
+cd shopping-cart-app
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# ReactProject_library
+# Install dependencies
+
+### with yarn
+
+```bash
+yarn install
+```
+
+### or with npm
+```bash
+npm install
+```
+
+### Running the app
+
+ Start the development server
+```bash
+    yarn dev
+```
+or with npm
+```bash
+    npm run dev
+```
+
+The app will be available at http://localhost:5173. If needed you can choose the port with --port or -p.
+
+### Building for production
+
+```bash
+yarn build
+```
+# Running tests
+
+### Run all tests
+```bash
+yarn test
+```
+# API Endpoints
+
+    //soon
+
+# Folder Structure
+
+```php
+├── public            # Public assets
+├── src
+│   ├── components    # Reusable components
+│   ├── hooks         # Custom hooks
+│   ├── styles        # Global and component-specific styles
+│   ├── App.tsx       # TypeScript component with all Bussiness rules 
+│   ├── main.tsx      # Main TypeScript function 
+│   └── vite-env.d.ts # Vite global variables 
+└── README.md
+```
+# Contributing
+
+Feel free to submit issues or pull requests. Contributions are welcome!

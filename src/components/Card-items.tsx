@@ -12,8 +12,9 @@ interface CardProps {
 export function Card({ value, image, description, title, onClick} : CardProps){
     return(
         <div className="card" onClick={onClick}>
-            <h2>{title}</h2>
-            <p><b>Valor:</b>{value}</p>
+            <img className="card-img" src={image}/>
+            <h2 className="card-title">{title}</h2>
+            <p className="card-value"><b>Valor:</b>{value}</p>
         </div>
     )
 }

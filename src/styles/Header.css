@@ -1,6 +1,8 @@
 .header{
-    background-color: #795757;
+    background-image: url('../img/banner_ecommerce.jpg');    
     position: fixed initial;
+    background-size: cover;
+    background-position: 0 55%;
     width: 100%;
     display: flex;
 }
@@ -11,7 +13,8 @@
     padding: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;  
+    overflow: hidden;
+    color: white;
 }
 
 .logo-icon{
@@ -35,17 +38,18 @@ h2{
 }
 
 .search-bar{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     display: flex;
     width: 100%;
     max-width: 500px;
     justify-content: space-between;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    margin-right: 40px;
 }
 
 .search-input{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     color: black;
     padding: 13px;
     flex-grow: 1;

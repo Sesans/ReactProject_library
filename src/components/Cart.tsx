@@ -11,6 +11,7 @@ function Cart({ cartItems, removeFromCart }: { cartItems: BookData[], removeFrom
     return (
       <div className="shopping-menu">
         <h2>Shopping Cart</h2>
+
         <ul>
           {cartItems.map((item: BookData, index: number) => (
             <li key={index}>
@@ -19,7 +20,11 @@ function Cart({ cartItems, removeFromCart }: { cartItems: BookData[], removeFrom
             </li>
           ))}
         </ul>
-        <h3>Total: {priceFormat(total)}</h3>
+
+        <div className="total-price">
+          <h3>Total: {priceFormat(total)}</h3>
+        </div>
+
       </div>
     );
   }

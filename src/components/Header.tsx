@@ -1,8 +1,16 @@
 import '../styles/Header.css';
+import { useState } from 'react';
 import { IoMdBook } from "react-icons/io";
 import { BiSearchAlt } from "react-icons/bi";
+import { CreateModal } from './Create-modal';
 
 function Header(){
+    const [isModalOpen, setIsModalOpen] = useState(false);
+  
+    const handleOpenModal = () => {
+      setIsModalOpen(prev => !prev);
+    }
+
     return(
         <header className='header'>
         <div className='nav-logo'>
@@ -18,6 +26,9 @@ function Header(){
                 </button>
             </form>
 
+            {isModalOpen && <CreateModal closeModal={handleOpenModal} />}
+            <button onClick={handleOpenModal}>add</button>
+            
         </div>
         </header>
     );

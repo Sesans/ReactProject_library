@@ -2,11 +2,9 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: black;
   background-color: white;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -26,11 +24,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #FFF0D1;
-  background-image: url('../img/banner_ecommerce.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0 55%;
+  background-color: white;
   height: 500px;
 }
 
@@ -46,7 +40,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #F5F7F8;
+  color: #333;
   cursor: pointer;
   transition: border-color 0.25s;
 }

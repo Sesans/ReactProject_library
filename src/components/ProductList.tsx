@@ -1,20 +1,13 @@
-import { useState } from 'react';
 import { Card } from './Card-items';
 import { BookData } from '../interface/BookData';
 import { useBookData } from '../hooks/useBookData';
-import { CreateModal } from './Create-modal';
 import '../styles/ProductList.css'
 
 function ProductList({ addToCart }: { addToCart: (book: BookData) => void }) {
     const { data } = useBookData();
-    const [isModalOpen, setIsModalOpen] = useState(false);
-  
-    const handleOpenModal = () => {
-      setIsModalOpen(prev => !prev);
-    }
-  
+
     return (
-      <div className="container">
+      <div className="pl-container">
         <div className='card-grid'>
           {data?.map((bookData: BookData) => (
             <Card
@@ -26,10 +19,7 @@ function ProductList({ addToCart }: { addToCart: (book: BookData) => void }) {
               onClick={() => addToCart(bookData)}
             />
           ))}
-
         </div>
-        {isModalOpen && <CreateModal closeModal={handleOpenModal} />}
-        <button onClick={handleOpenModal}>Novo</button>
       </div>
     );
   }

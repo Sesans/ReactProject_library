@@ -4,7 +4,7 @@ import { BookData } from '../interface/BookData';
 
 const API_URL = 'http://localhost:8080';
 
-const postData = async (data: BookData): AxiosPromise<any> => {
+const postData = async (data: BookData[]): AxiosPromise<any> => {
     const response = axios.post(API_URL + '/livros/criar', data);
     return response;
 }

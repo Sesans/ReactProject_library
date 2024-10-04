@@ -8,7 +8,7 @@ function ProductList({ addToCart }: { addToCart: (book: BookData) => void }) {
 
     return (
       <div className="pl-container">
-        <div className='card-grid'>
+        <div className='card-grid'> 
           {data?.map((bookData: BookData) => (
             <Card
               key={bookData.id}

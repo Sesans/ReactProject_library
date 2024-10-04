@@ -1,4 +1,6 @@
 .shopping-menu{
+    width: 100%;
+    padding-right: 20px;
 }
 
 .total-price{
@@ -8,4 +10,31 @@
     align-items:flex-end;
     justify-self:center;
     flex-grow: 1;
+}
+
+.elements-list{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    border: 2px solid #c6c5c5c5;
+    padding: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.item-view{
+    flex-grow: 1;
+}
+
+.edit-item{
+    right: 0;
+    top: 0;
+    font-size: 16px;
+    font-weight: 500px;
 }

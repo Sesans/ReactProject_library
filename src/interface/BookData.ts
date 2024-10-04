@@ -1,7 +1,8 @@
 export interface BookData{
-    id?: number,
+    id: number,
     title: string,
     image: string,
     description: string,
-    value: number;
+    value: number,
+    unitsAvailable: number;
 }

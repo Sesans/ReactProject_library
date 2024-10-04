@@ -1,5 +1,5 @@
 .card{
-    background-color: #fff;
+    background-color: #F5F7F8;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -8,6 +8,8 @@
     filter: blur(0.5px);
     transition: filter 0.3s ease-in-out;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
@@ -28,11 +30,10 @@
 }
 
 .card-value{
-    position: absolute;
     bottom: 20px;
     left: 20px;
     font-size: 16px;
-    color: #666;
+    color: #333;
     margin-top: 10px;
 }
 

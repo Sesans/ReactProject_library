@@ -3,6 +3,7 @@
 }
 
 .container-plist{
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -11,8 +12,8 @@
 .container-cart{
     display: flex;
     justify-content: left;
-    max-width: 500px;
+    max-width: 550px;
     margin-left: auto;
-    width: 30%;
+    width: 100%;
     height: 100vh;
 }

@@ -28,6 +28,7 @@ export function CreateModal({ closeModal }: ModalProps){
     const [value, setValue] = useState(0);
     const [image, setImage] = useState("");
     const [description, setDescription] = useState("");
+    const [unitsAvailable, setUnitsAvailable] = useState(0);
     const { mutate, isSuccess, isPending } = useBookDataMutate();
 
     const submit = () => {
@@ -36,9 +37,10 @@ export function CreateModal({ closeModal }: ModalProps){
             title,
             image,
             description,
-            value
+            value,
+            unitsAvailable
         }
-        mutate(bookData)
+        mutate([bookData])
     }
 
     useEffect(() => {
@@ -49,15 +51,17 @@ export function CreateModal({ closeModal }: ModalProps){
     return(
         <div className="modal-overlay">
             <div className="modal-body">
-                <h2>Cadastre um novo item no cardápio</h2>
+                <h2>Add a new item</h2>
+                <button className="btn-close" onClick={closeModal}>×</button>
                 <form className="input-container">
-                    <Input label="title" value={title} updateValue={setTitle}/>
-                    <Input label="price" value={value} updateValue={setValue}/>
-                    <Input label="image" value={image} updateValue={setImage}/>
-                    <Input label="description" value={description} updateValue={setDescription}/>
+                    <Input label="Title" value={title} updateValue={setTitle}/>
+                    <Input label="Price" value={value} updateValue={setValue}/>
+                    <Input label="Image URL" value={image} updateValue={setImage}/>
+                    <Input label="Description" value={description} updateValue={setDescription}/>
+                    <Input label="Units Available" value={unitsAvailable} updateValue={setUnitsAvailable} />
                 </form>
                 <button onClick={submit} className="btn-secondary">
-                    {isPending ? 'postando...' : 'postar'}
+                    {isPending ? 'posting...' : 'post'}
                 </button>
             </div>
         </div>

@@ -10,7 +10,6 @@ export function priceFormat(value: number) {
 
 function Cart({ cartItems, removeFromCart }: { cartItems: BookData[], removeFromCart: (index: number) => void }) {
   const total = cartItems.reduce((acc: number, item: BookData) => acc + item.value, 0);
-
   const groupedItems = cartItems.reduce((acc: { [id: number]: BookData[] }, item: BookData) => {
     if (!acc[item.id]) {
       acc[item.id] = [];
@@ -64,5 +63,3 @@ function Cart({ cartItems, removeFromCart }: { cartItems: BookData[], removeFrom
   );
 }
   export default Cart;
-
-  //removeFromCart(cartItems.findIndex((item: BookData) => item.id === itemId))} className="remove-btn">

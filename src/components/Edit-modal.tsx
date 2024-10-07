@@ -15,6 +15,7 @@ interface EditModalProps {
     const handleRemoveFromCart = () => {
         if(props.product){
             props.removeFromCart(props.product.id);
+            props.closeModal();
         }
       };
   

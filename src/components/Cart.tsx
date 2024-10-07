@@ -1,8 +1,10 @@
-import { BookData } from "../interface/BookData";
 import '../styles/Cart.css';
+import { BookData } from "../interface/BookData";
 import { HiBars3 } from "react-icons/hi2";
+import { useState } from 'react';
+import { EditModal } from './Edit-modal';
 
-function priceFormat(value: number) {
+export function priceFormat(value: number) {
     return `R$ ${value.toFixed(2)}`;
 }
 
@@ -17,6 +19,14 @@ function Cart({ cartItems, removeFromCart }: { cartItems: BookData[], removeFrom
     return acc;
   }, {});
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<BookData | null>(null);
+
+  const handleOpenModal = (product: BookData) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  }
+
   return (
     <div className="shopping-menu">
       <h2>Shopping Cart</h2>
@@ -29,9 +39,11 @@ function Cart({ cartItems, removeFromCart }: { cartItems: BookData[], removeFrom
               <div className="item-view">
               {groupedItems[itemId][0].title} x {groupedItems[itemId].length} - {priceFormat(groupedItems[itemId].reduce((acc: number, item: BookData) => acc + item.value, 0))}
               </div>
+
               <div className="edit-item">
-              <button onClick={() => removeFromCart(cartItems.findIndex((item: BookData) => item.id === itemId))} className="remove-btn"><HiBars3 /></button>
+              <button onClick={() => handleOpenModal(groupedItems[itemId][0])}><HiBars3 /></button>
               </div>
+              
             </li>
           );
         })}
@@ -41,7 +53,16 @@ function Cart({ cartItems, removeFromCart }: { cartItems: BookData[], removeFrom
         <h3>Total: {priceFormat(total)}</h3>
       </div>
 
-    </div>
+      {isModalOpen && selectedProduct && (
+      <EditModal
+        closeModal={() => setIsModalOpen(false)}
+        product={selectedProduct}
+        quantity={groupedItems[selectedProduct.id].length}
+        removeFromCart={removeFromCart}
+      />
+    )}    </div>
   );
 }
   export default Cart;
+
+  //removeFromCart(cartItems.findIndex((item: BookData) => item.id === itemId))} className="remove-btn">

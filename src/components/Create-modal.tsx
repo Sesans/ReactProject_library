@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useBookDataMutate } from '../hooks/useBookDataMutate';
 import { BookData } from '../interface/BookData';
 
-import "../styles/Modal.css";
+import '../styles/Modal.css';
 
 interface InputProps {
     label: string,

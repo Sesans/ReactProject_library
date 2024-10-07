@@ -1,5 +1,6 @@
 .body-content{
     display: flex;
+    height: 100vh;
 }
 
 .container-plist{
@@ -15,5 +16,4 @@
     max-width: 550px;
     margin-left: auto;
     width: 100%;
-    height: 100vh;
 }

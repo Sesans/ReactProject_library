@@ -12,12 +12,6 @@ function App() {
     setCartItems([...cartItems, book]);
   };
 
-  const removeFromCart = (index: number) => {
-    const newCart = cartItems.filter((_, i) => i !== index);
-    setCartItems(newCart);
-  };
-
-
   return (
     <div className='body-container'>
       <Header />
@@ -26,7 +20,7 @@ function App() {
         <ProductList addToCart={addToCart} />
       </div>
       <div className='container-cart'>
-        <Cart cartItems={cartItems} removeFromCart={removeFromCart} />  
+        <Cart cartItems={cartItems} setCartItems={setCartItems} />  
       </div>
       </div>
     </div>

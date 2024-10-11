@@ -1,7 +1,7 @@
 import "../styles/Card-items.css";
 
 interface CardProps {
-    value: number;
+    value: string;
     title: string;
     description: string;
     image: string;

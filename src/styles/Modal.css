@@ -70,8 +70,8 @@
 .btn-close {
     position: absolute;
     width: 70px;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     background-color: #EEEDEB;
     border: none;
     border-top-right-radius: 16px;

@@ -2,6 +2,13 @@
 
 A web application for managing an e-commerce shopping cart, built with **React**, **TypeScript**, and **Vite**, and connected to a backend API.
 
+## APS Requirements
+
+Each requirements is commented with "Functional Requirement 'x'"
+1. Add products to the Cart.
+2. View products.
+3. Edit item quantity.
+
 ## Features
 
 - **Add to Cart**: Users can add items to the shopping cart.

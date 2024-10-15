@@ -9,6 +9,7 @@ interface CardProps {
 
 }
 
+//Functional Requirements 1: Name and value displayed in the User Interface;
 export function Card({ value, image, description, title, onClick} : CardProps){
     return(
         <div className="card" onClick={onClick}>

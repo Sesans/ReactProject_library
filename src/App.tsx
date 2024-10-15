@@ -8,6 +8,7 @@ import Header from './components/Header';
 function App() {
   const [cartItems, setCartItems] = useState<BookData[]>([]);
 
+  //Functional Requirements 1: Allow the user to add products in the cart;
   const addToCart = (book: BookData) => {
     setCartItems([...cartItems, book]);
   };
@@ -20,7 +21,7 @@ function App() {
         <ProductList addToCart={addToCart} />
       </div>
       <div className='container-cart'>
-        <Cart cartItems={cartItems} setCartItems={setCartItems} />  
+        <Cart cartItems={cartItems} setCartItems={setCartItems} />
       </div>
       </div>
     </div>

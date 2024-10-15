@@ -10,6 +10,9 @@ interface EditModalProps {
   updateQuantity: (id: number, quantity: number) => void;
 }
 
+//Functional Requirements 3: Allow the user to edit the quantity of each of the items;
+//This modal displays the item the user clicked on. 
+//Name, image, description, quantity and unit value. The quantity can be changed manually by the user;
 export function EditModal(props: EditModalProps) {
   if (!props.product) return null;
 

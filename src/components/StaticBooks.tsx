@@ -1,3 +1,4 @@
+//List with static books to be used if the api is unreacheble;
 const staticProducts= [
     {
         id: 1,

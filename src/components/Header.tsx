@@ -4,7 +4,9 @@ import { IoMdBook } from "react-icons/io";
 import { BiSearchAlt } from "react-icons/bi";
 import { CreateModal } from './Create-modal';
 
+//This functions implements all the functionalities about the Header section from the e-commerce;
 function Header(){
+
     const [isModalOpen, setIsModalOpen] = useState(false);
   
     const handleOpenModal = () => {
